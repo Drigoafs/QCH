@@ -1,0 +1,7 @@
+{
+  "name": "Que Comemos Hoy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
