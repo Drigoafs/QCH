@@ -6,14 +6,19 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
+import { IngredientsService } from '../core/services/ingredients.service';
+import { RecipesService } from '../core/services/recipes.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [TabsPage]
+  declarations: [TabsPage],
+  providers: [IngredientsService,RecipesService]
 })
 export class TabsPageModule {}

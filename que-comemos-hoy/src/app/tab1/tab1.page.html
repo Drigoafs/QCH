@@ -1,15 +1,34 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Recetas
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button>
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button color="secondary">
+          <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Default Buttons</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Recetas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <section id="ingredients">
+    <ion-searchbar (ionChange)="searchIngredients($event)" [debounce]="500"></ion-searchbar>
+    <ion-list>
+      <!-- resultados -->
+    </ion-list>
+  </section>
+
+  <section id="recipes">
+    <ion-searchbar></ion-searchbar>
+    <ion-list>
+      <!-- resultados -->
+    </ion-list>
+  </section>
 </ion-content>
